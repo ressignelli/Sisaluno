@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <title>Cadastro de Aluno</title>
+     <!-- Aqui chamamos o nosso arquivo css externo -->
+    <link rel="stylesheet" type="text/css"  href="index.css" />
+</head>
+
+	<script src="script.js" type="text/javascript"></script>
+    <body onload="Desabilitar()">  
+
+        <!-- Cabeçalho com título e subtítulo (ambos com css de id "titulo") -->
+        <div>
+            <h1 id="titulo">Escola</h1>
+            <h1 id="subtitulo">Cadastro de Alunos</h1>
+            <br>
+        </div>
+
+	<nav>
+  	<ul class="menu">
+		<li><a href="javascript:Habilitar()">Novo</a></li>
+		<li><a href="javascript:Habilitar()">Alterar</a></li>
+		<li><a href="javascript:Excluir()">Excluir</a></li>
+		<li><a href="#">Imprimir</a></li>
+ 	</ul>
+	</nav>
+     
+
+<br><br><hr><br>
+	 <!-- Início do formulário -->
+        <form id="form1" action="index.php" method="post">
+            <div class="campo">
+
+                <label for="rm"><strong>Registro de Matrícula (RM): </strong></label>
+                <input type="text" name="rm" id="rm" required>
+
+                <label for="ra"><strong>Registro do Aluno (RA): </strong></label>
+                <input type="text" name="ra" id="ra" required>
+
+                <label for="serie/ano"><strong>Série/ano: </strong></label>
+                <input type="text" name="serieano" id="serieano" required>
+            </div>
+
+            <div class="campo">
+		<br>
+                <label for="rg"><strong>Registro Geral (RG): </strong></label>
+                <input type="text" name="rg" id="rg" class="rg">
+                <label for="de"><strong>Data de Expedição: </strong></label>
+                <input type="date" name="de" id="de">
+                <label for="cpf"><strong>CPF: </strong></label>
+                <input type="text" name="cpf" id="cpf">
+            </div>
+
+            <div class="campo">
+		<br>
+                <label for="rne"><strong>Registro Nacional de Estrangeiro (RNE): </strong></label>
+                <input type="text" name="rne" id="rne">
+
+                <label for="paisrne"><strong>País: </strong></label>
+                <input type="text" name="paisrne" id="paisrne">
+
+                <label for="datarne"><strong>Data: </strong></label>
+                <input type="date" name="datarne" id="datarne">
+            </div>
+<br>
+<hr>
+<br>
+
+            <fieldset class="grupo">
+                <!-- Campo do nome com legenda "nome" e css de classe "campo" -->
+                <div class="campo">
+                    <label for="nome"><strong>Nome</strong></label>
+                    <input type="text" name="nome" id="nome" required>
+
+                    <label for="sobrenome"><strong>Sobrenome</strong></label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+
+                    <label for="datanasc"><strong>Data de Nascimento</strong></label>
+                    <input type="date" name="datanasc" id="datanasc" required>
+                </div>
+		<br>
+            	<div class="campo">
+                	<label><strong>Sexo Genético</strong></label>
+                	<label>
+                    	<input type="radio" name="sexo" value="masculino" checked>Masculino
+                	</label>
+                	<label>
+                    	<input type="radio" name="sexo" value="feminino">Feminino
+                	</label>
+
+                	<label><strong>| Grupo Étnico</strong></label>
+                	<label>
+                    	<input type="radio" name="cor" value="branco" checked>Branco
+                	</label>
+                	<label>
+                    	<input type="radio" name="cor" value="preto">Preto
+                	</label>
+                    	<input type="radio" name="cor" value="pardo">Pardo
+                	</label>
+                    	<input type="radio" name="cor" value="indio">Indígena
+                	</label>
+            	</div>
+            </fieldset> 
+<br>
+<hr>
+<br>
+
+            <div class="campo">
+                <label for="nis"><strong>Número de Identificação Social (NIS)</strong></label>
+                <input type="text" name="nis" id="nis">
+
+                <label><strong>Bolsa Família/outro</strong></label>
+                <label>
+                	<input type="radio" name="bf" value="bfsim" checked>Sim
+                </label>
+                <label>
+                    	<input type="radio" name="bf" value="bfnao">Não
+                </label>
+
+                <label><strong> | Portador de Necessidades Especiais</strong></label>
+                <label>
+                	<input type="radio" name="pne" value="pnesim" checked>Sim
+                </label>
+                <label>
+                    	<input type="radio" name="pne" value="pnenao">Não
+                </label>
+
+                <label for="qualpne"><strong> | Qual:</strong></label>
+                <input type="textarea" name="qualpne" id="qualpne">
+            </div>
+
+	    <br>
+
+            <div class="campo">
+                <label for="localnasc"><strong>Naturalidade</strong></label>
+                <input type="text" name="naturalidade" id="naturalidade">
+
+                <label for="estadonasc"><strong>UF</strong></label>
+                <input type="text" name="uf" id="uf">		
+
+                <label for="nacionalidade"><strong>Nacionalidade</strong></label>
+                <input type="text" name="nacionalidade" id="nacionalidade">
+            </div>
+
+	    <br>
+
+            <!-- Campo de email com-->
+            <div class="campo">
+                <label for="email"><strong>Email</strong></label>
+                <input type="email" name="email" id="email">
+                <label for="telefone"><strong>Telefone/Celular</strong></label>
+                <input type="text" name="telefone" id="telefone">
+            </div>
+<br><hr><br>
+            <fieldset class="grupo">
+            	<div class="campo">
+                	<label for="nomemae"><strong>Nome da Mãe</strong></label>
+                	<input type="text" name="nomemae" id="nomemae" size="40">
+                	<label for="telefonemae"><strong>Telefone/Celular</strong></label>
+                	<input type="text" name="telefonemae" id="telefonemae">
+<br><br>
+                	<label for="nomepai"><strong>Nome do Pai</strong></label>
+                	<input type="text" name="nomepai" id="nomepai" size="40">
+                	<label for="telefonepai"><strong>Telefone/Celular</strong></label>
+                	<input type="text" name="telefonepai" id="telefonepai">
+<br><br>
+                	<label for="responsavellegal"><strong>Nome do Responsável Legal</strong></label>
+               		<input type="text" name="nomeresp" id="nomeresp" size="40">
+                	<label for="telefoneresp"><strong>Telefone/Celular</strong></label>
+                	<input type="text" name="telefoneresp" id="telefoneresp">
+            	</div>
+	    </fieldset>
+<br><hr><br>
+            <!-- Botão cadastrar endereços -->
+            <button class="botaocad" type="submit" onsubmit="">Adicionar endereço</button>
+		<label><strong>Endereço1: | Endereço2: | Endereço3:</strong></label>
+        </form>
+
+<br><hr><br>
+        <!-- Botão para enviar o formulário -->
+        <button class="botaosalvar" type="submit" onsubmit="" onclick="Desabilitar()">Salvar</button>            
+        <button class="botaocancelar" onclick="Desabilitar()">Cancelar</button>     
+
+
+    </body>
+
+</html>
+
+
+
+
