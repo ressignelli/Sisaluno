@@ -46,11 +46,6 @@ body{
     text-align: center;
 } 
 
-/* Elementos de tag <fieldset>*/
-fieldset {
-    border: 0;
-}
-
 /* Elementos de tags <body>, <input>, <Select>, <textarea> e <button> */
 input, select, textarea, button {
     font-family: sans-serif;
@@ -81,13 +76,6 @@ input, select, textarea, button {
     display: inline-block;
 }
 
-/* Elementos de classe "campo" ou "grupo" de tag <fieldset> */
-fieldset.grupo .campo {
-    float:  left;
-    color: #59429d;;
-    margin-right: 10em;
-
-}
 
 /* Elementos de classe "campo" das tags <input> com atributo text e email, da tag <select> e da tag <textarea>*/
 .campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {

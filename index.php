@@ -18,7 +18,7 @@
 
     <nav>
     <ul class="menu">
-        <li><a href="novo.html">Novo</a></li>
+        <li><a href="novo.php">Novo</a></li>
         <li><a href="#">Imprimir Página</a></li>
     </ul>
     </nav>
@@ -65,6 +65,12 @@
                 <td>CIDADE</td>
                 <td>CEP</td>
                 <td>TELEFONE</td>
+                <td>NOME DA MÃE</td>
+                <td>TEL MÃE</td>
+                <td>NOME DO PAI</td>
+                <td>TEL PAI</td>
+                <td>NOME DO RESPONSÁVEL</td>
+                <td>TEL RESPONSÁVEL</td>
             </tr>
             <?php
                 require("conecta.php");
@@ -83,9 +89,9 @@
                     else
                     {
                         $ref2= '';
-                    }                       
-                    $dados_select = mysqli_query($conn, "SELECT ra, nomealuno, sobrenome, datanasc, rg, cpf, serieano, logradouro, numero, bairro, cidade, cep, telefone FROM aluno.aluno WHERE nomealuno LIKE '%$ref%' and sobrenome LIKE '%$ref2%'");
-
+                    }
+                    $dados_select = mysqli_query($conn, "SELECT ra, nomealuno, sobrenome, datanasc, rg, cpf, serieano, logradouro, numero, bairro, cidade, cep, telefone, nomemae, telmae, nomepai, telpai, nomeresp, telresp FROM id22110147_sisaluno.aluno WHERE nomealuno LIKE '%$ref%' and sobrenome LIKE '%$ref2%'");
+                    
                     while($dado = mysqli_fetch_array($dados_select)) {
                         echo '<tr>';
                         echo '<td>'.$dado[0].'</td>';
@@ -101,6 +107,12 @@
                         echo '<td>'.$dado[10].'</td>';
                         echo '<td>'.$dado[11].'</td>';
                         echo '<td>'.$dado[12].'</td>';
+                        echo '<td>'.$dado[13].'</td>';
+                        echo '<td>'.$dado[14].'</td>';
+                        echo '<td>'.$dado[15].'</td>';
+                        echo '<td>'.$dado[16].'</td>';
+                        echo '<td>'.$dado[17].'</td>';
+                        echo '<td>'.$dado[18].'</td>';
                         echo '</tr>';
                     }
             ?>

@@ -20,7 +20,7 @@
                 <?php
                    require("conecta.php");
                         $ref3 = $_POST['raalterar'];
-                        $sql = mysqli_query($conn, "SELECT * FROM aluno.aluno WHERE ra = '$ref3'");
+                        $sql = mysqli_query($conn, "SELECT * FROM id22110147_sisaluno.aluno WHERE ra = '$ref3'");
  
                         // Verifica se recebeu ao menos um resultado (o que se espera)
                         if($exibe = mysqli_fetch_array($sql))
@@ -42,8 +42,15 @@
                             $Numero = $exibe["numero"];
                             $Bairro = $exibe["bairro"];
                             $CEP = $exibe["cep"];
-                            $Cidade = $exibe["cidade"]
-
+                            $Cidade = $exibe["cidade"];
+                            
+                            $Nomemae = $exibe["nomemae"];
+                            $Telmae = $exibe["telmae"];
+                            $Nomepai = $exibe["nomepai"];
+                            $Telpai = $exibe["telpai"];
+                            $Nomeresp = $exibe["nomeresp"];
+                            $Telresp = $exibe["telresp"];
+                            
                             // Imprime formulário pré carregado
                             ?>
                             <form action="salva_alt_aluno.php" method="POST">
@@ -70,9 +77,21 @@
                                 Bairro: <input type="text" name="bairro" value="<?php echo $Bairro; ?>" required>
                                 CEP: <input type="text" name="cep" value="<?php echo $CEP; ?>" required>
                                 Cidade: <input type="text" name="cidade" value="<?php echo $Cidade; ?>" required>
+                                
+                                <br><br><hr><br>Responsáveis:
+                                <br><br>
+                                Nome da Mãe: <input type="text" name="nomemae" value="<?php echo $Nomemae; ?>">
+                                Telefone: <input type="text" name="telmae" value="<?php echo $Telmae; ?>">
+                                <br><br>
+                                Nome do Pai: <input type="text" name="nomepai" value="<?php echo $Nomepai; ?>">
+                                Telefone: <input type="text" name="telpai" value="<?php echo $Telpai; ?>">                                
+                                <br><br>
+                                Nome Responsável: <input type="text" name="nomeresp" value="<?php echo $Nomeresp; ?>">
+                                Telefone: <input type="text" name="telresp" value="<?php echo $Telresp; ?>">
                                 <br><br><hr><br>
                                 <input type="submit" value="Salvar Alteração">
                             </form>
+                            <a href="index.php"><input type="button" value="Cancelar"></a> 
                             <?php
                         }
                         else // RA inválido

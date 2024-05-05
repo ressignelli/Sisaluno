@@ -2,12 +2,12 @@
     require("conecta.php");
     $ra = $_POST['raexcluir'];
 
-    $sql = mysqli_query($conn, "SELECT * FROM aluno.aluno WHERE ra = '$ra'");
+    $sql = mysqli_query($conn, "SELECT * FROM id22110147_sisaluno.aluno WHERE ra = '$ra'");
  
       if($verifica = mysqli_fetch_array($sql))
       {
 
-        $sql = "DELETE FROM aluno.aluno WHERE ra = '$ra'";
+        $sql = "DELETE FROM id22110147_sisaluno.aluno WHERE ra = '$ra'";
 
           if ($conn->query($sql) === TRUE) {
             echo "<center><h1>Registro Excluido com Sucesso</h1>";
